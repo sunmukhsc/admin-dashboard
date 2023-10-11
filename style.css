@@ -20,9 +20,11 @@ svg {
     color: white;
     font-weight: 600;
     padding: 20px;
+    padding-left: 40px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 100px 400px 1fr;
     justify-items: space-between;
+    gap: 30px;
 }
 
 .header {
@@ -35,9 +37,31 @@ svg {
 }
 
 .dashboard-title {
+    grid-area: 1 / 1 / 2 / 2;
     display: grid;
     grid-template-columns: 50px 1fr;
     align-items: center;
     gap: 12px;
     font-size: 32px;
+}
+
+.nav {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(6, 50px);
+}
+
+.nav-item,
+.settings-item {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 20px;
+    align-items: center;
+    font-size: 25px;
+}
+
+.settings {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(3, 50px);
 }
